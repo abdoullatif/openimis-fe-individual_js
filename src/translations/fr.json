@@ -1,0 +1,282 @@
+{
+    "mainMenuIndividuals": "Bénéficiaires et ménages",
+    "emptyLabel": " ",
+    "any": "N'importe lequel",
+    "editButtonTooltip": "Modifier",
+    "deleteButtonTooltip": "Supprimer",
+    "undoButtonTooltip": "Annuler la suppression",
+    "dialog": {
+      "create": "Créer",
+      "update": "Sauvegarder",
+      "cancel": "Annuler"
+    },
+    "menu": {
+      "individuals": "Particuliers",
+      "groups": "Groupes"
+    },
+    "individual": {
+      "pageTitle": "Individu {firstName} {lastName}",
+      "headPanelTitle": "Informations générales",
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "dob": "Jour de naissance",
+      "isDeleted": "Afficher supprimé",
+      "addButtonTooltip": "Ajouter une personne au groupe",
+      "additonalFields": {
+        "label": "Champs supplémentaires",
+        "showAdditionalFields": "Afficher les champs supplémentaires",
+        "close": "Fermer"
+      },
+      "mandatoryFieldsEmptyError": "*Ces champs sont obligatoires",
+      "benefits": {
+        "label": "Avantages"
+      },
+      "delete": {
+        "confirm": {
+          "title": "Supprimer {firstName} {lastName} ?",
+          "message": "Supprimer des données ne signifie pas les effacer de la base de données OpenIMIS. "
+        },
+        "mutationLabel": "Supprimer l'individu {id}"
+      },
+      "undo": {
+        "confirm": {
+          "title": "Annuler la suppression de {firstName} {lastName} ?",
+          "message": "Annulation de la suppression d'un individu."
+        },
+        "mutationLabel": "Annuler la suppression de l'individu {id}"
+      },
+      "update": {
+        "label": "Mettre à jour l'individu",
+        "mutationLabel": "Mettre à jour l'individu {id}"
+      },
+      "upload": {
+        "buttonLabel": "TÉLÉCHARGER",
+        "label": "Télécharger des individus",
+        "alert.sameFileName": "Le nom de fichier existe pour un plan de prestations donné. ",
+        "alert.header": "Erreur lors du téléchargement du fichier.",
+        "workflowPicker": "Flux de travail",
+        "cancel": "Annuler",
+        "uploadHistoryTable": {
+          "workflow": "Flux de travail",
+          "dateCreated": "Date de création",
+          "sourceType": "Type de source",
+          "sourceName": "Nom de la source",
+          "status": "Statut",
+          "error": "Erreurs de flux de travail",
+          "buttonLabel": "HISTORIQUE DE TÉLÉCHARGEMENT",
+          "label": "Tableau de l'historique des téléchargements",
+          "userCreated": "Utilisateur créé",
+          "downloadInvalidItems": "Télécharger des éléments invalides",
+          "downloadUploadFile": "Télécharger Télécharger le fichier"
+        }
+      },
+      "enrollment": {
+        "buttonLabel": "INSCRIPTION",
+        "title": "Inscription des individus au programme",
+        "titleGroup": "Inscription des groupes au programme",
+        "label": "Inscrire des individus au programme",
+        "cancel": "Annuler",
+        "summary": "Aperçu du résumé des inscriptions",
+        "addFilters": "Ajouter des filtres",
+        "criteria": "Critères d'inscription",
+        "clearAllFilters": "Effacer tous les filtres",
+        "previewEnrollment": "Aperçu du processus d'inscription",
+        "confirmEnrollment": "Confirmer le processus d'inscription",
+        "confirmTitle": "Confirmer le processus d'inscription",
+        "mutationLabel": "L'inscription a été confirmée",
+        "numberOfSelectedIndividuals": "Nombre total de personnes sélectionnées",
+        "totalNumberOfIndividuals": "Nombre total d'individus",
+        "numberOfIndividualsAssignedToProgramme": "Nombre de personnes déjà affectées à un programme",
+        "numberOfIndividualsNotAssignedToProgramme": "Nombre de personnes sans affectation au programme",
+        "numberOfIndividualsAssignedToSelectedProgramme": "Nombre de personnes déjà affectées au programme sélectionné",
+        "numberOfIndividualsToBeUploaded": "Nombre d'individus à télécharger",
+        "confirmMessageDialog": "Êtes-vous sûr de vouloir confirmer l'inscription des personnes sélectionnées au programme {benefitPlanName} ?",
+        "confirmGroupMessageDialog": "Êtes-vous sûr de vouloir confirmer l'inscription des groupes sélectionnés au programme {benefitPlanName} ?",
+        "previewIndividuals": "Aperçu des individus",
+        "previewGroups": "Aperçu des groupes",
+        "close": "Fermer",
+        "totalNumberOfGroups": "Nombre total de groupes",
+        "numberOfSelectedGroups": "Nombre de groupes sélectionnés",
+        "numberOfGroupsAssignedToProgramme": "Nombre de groupes affectés au programme",
+        "numberOfGroupsNotAssignedToProgramme": "Nombre de groupes non affectés au programme",
+        "numberOfGroupsAssignedToSelectedProgramme": "Nombre de groupes affectés au programme sélectionné",
+        "numberOfGroupsToUpload": "Nombre de groupes à télécharger"
+      },
+      "saveButton.tooltip.enabled": "Enregistrer les modifications",
+      "saveButton.tooltip.disabled": "Veuillez d'abord remplir les champs Informations générales",
+      "individualsList": {
+        "label": "MEMBRES"
+      },
+      "tasks": {
+        "title": "Tâches individuelles"
+      },
+      "any": "N'IMPORTE LEQUEL",
+      "ok": "d'accord",
+      "individualChangelog.label": "Journal des modifications",
+      "individualTasks.label": "Tâches",
+      "groupChange": {
+        "confirm": {
+          "message": "L'individu {individualId} a été déplacé vers le groupe {groupId}"
+        }
+      }
+    },
+    "individualHistory": {
+      "pageTitle": "Individu {firstName} {lastName}",
+      "headPanelTitle": "Informations générales",
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "dob": "Jour de naissance",
+      "dateUpdated": "Date de mise à jour",
+      "version": "Version",
+      "individualsList": {
+        "label": "MEMBRES"
+      },
+      "any": "N'IMPORTE LEQUEL",
+      "ok": "d'accord",
+      "jsonExt": "Champs supplémentaires",
+      "userUpdated": "Modifié par",
+      "dateUpdated_Gte": "Date mise à jour après",
+      "dateUpdated_Lte": "Date de mise à jour avant"
+    },
+    "individuals": {
+      "pageTitle": "Particuliers",
+      "searcherResultsTitle": "{individualsTotalCount} individus trouvés"
+    },
+    "individualHistoryList": {
+      "pageTitle": "Histoire des individus",
+      "searcherResultsTitle": "{individualHistoryTotalCount} enregistrements historiques trouvés"
+    },
+    "groups": {
+      "pageTitle": "Groupes",
+      "searcherResultsTitle": "{groupsTotalCount} groupes trouvés"
+    },
+    "group": {
+      "id": "IDENTIFIANT",
+      "head": "Tête",
+      "code": "Code",
+      "create": {
+        "mutationLabel": "Groupe créé {id}"
+      },
+      "noHeadSpecified": "tête non précisée",
+      "individual.firstName": "Prénom individuel",
+      "individual.lastName": "Nom de famille individuel",
+      "pageTitle": "Groupe {identifiant}",
+      "headPanelTitle": "informations générales",
+      "mandatoryFieldsEmptyError": "*Ces champs sont obligatoires",
+      "delete": {
+        "confirm": {
+          "title": "Supprimer {id} ?",
+          "message": "Supprimer des données ne signifie pas les effacer de la base de données OpenIMIS. "
+        },
+        "mutationLabel": "Supprimer le groupe {id}"
+      },
+      "createGroupAndMoveIndividual": {
+        "mutationLabel": "Créez un groupe et déplacez un individu."
+      },
+      "tasks": {
+        "create": {
+          "title": "Tâches de création de groupe"
+        }
+      },
+      "members": "Membres"
+    },
+    "groupHistory": {
+      "pageTitle": "Groupe {identifiant}",
+      "headPanelTitle": "Informations générales",
+      "id": "IDENTIFIANT",
+      "head": "Tête",
+      "primaryRecipient": "Destinataire principal",
+      "secondaryRecipient": "Destinataire secondaire",
+      "dateUpdated": "Date de mise à jour",
+      "version": "Version",
+      "any": "N'IMPORTE LEQUEL",
+      "ok": "d'accord",
+      "jsonExt": "Champs supplémentaires",
+      "members": "Membres",
+      "userUpdated": "Modifié par",
+      "dateUpdated_Gte": "Date mise à jour après",
+      "dateUpdated_Lte": "Date de mise à jour avant"
+    },
+    "groupHistoryList": {
+      "pageTitle": "Historique des groupes",
+      "searcherResultsTitle": "{groupHistoryTotalCount} enregistrements historiques trouvés"
+    },
+    "export": {
+      "label": "TÉLÉCHARGER",
+      "dateCreated": "Date de création",
+      "id": "identifiant",
+      "filename": {
+        "individuals": "individus_export",
+        "groups": "groupes_export"
+      },
+      "firstName": "prénom",
+      "lastName": "nom de famille",
+      "dob": "date_de_naissance",
+      "role": "rôle"
+    },
+    "groupIndividual": {
+      "individual": {
+        "role": "Rôle",
+        "recipientType": "Type de destinataire",
+        "groupId": "Identifiant du groupe",
+        "individualId": "ID individuel"
+      },
+      "update": {
+        "label": "Mettre à jour l'individu",
+        "mutationLabel": "Mettre à jour l'individu {id}"
+      },
+      "tasks": {
+        "update": {
+          "title": "Tâches de mise à jour de groupe"
+        }
+      },
+      "groupIndividualRolePicker.HEAD": "TÊTE",
+      "groupIndividualRolePicker.SPOUSE": "CONJOINT",
+      "groupIndividualRolePicker.SON": "FILS",
+      "groupIndividualRolePicker.DAUGHTER": "FILLE",
+      "groupIndividualRolePicker.GRANDFATHER": "GRAND-PÈRE",
+      "groupIndividualRolePicker.GRANDMOTHER": "GRAND-MÈRE",
+      "groupIndividualRolePicker.MOTHER": "MÈRE",
+      "groupIndividualRolePicker.FATHER": "PÈRE",
+      "groupIndividualRolePicker.null": " ",
+      "groupIndividualRecipientTypePicker.PRIMARY": "PRIMAIRE",
+      "groupIndividualRecipientTypePicker.SECONDARY": "SECONDAIRE",
+      "groupIndividualRecipientTypePicker.null": " ",
+      "groupIndividualRolePicker": "Rôle",
+      "dateJoined": "Date d'adhésion",
+      "statusOfMembership": "Statut de membre"
+    },
+    "groupIndividualHistoryList": {
+      "searcherResultsTitle": "{groupIndividualHistoryTotalCount} enregistrements historiques trouvés"
+    },
+    "groupIndividualHistory": {
+      "individual": {
+        "role": "Rôle",
+        "groupId": "Identifiant du groupe",
+        "individualId": "ID individuel"
+      },
+      "label": "Historique du groupe",
+      "groupIndividualRolePicker.HEAD": "TÊTE",
+      "groupIndividualRolePicker.RECIPIENT": "DESTINATAIRE",
+      "groupIndividualRolePicker": "Rôle"
+    },
+    "groupChangelog.label": "Journal des modifications",
+    "groupTasks.label": "Tâches",
+    "groupPicker": {
+      "label": "Sélectionnez un groupe."
+    },
+    "groupChangeDialog": {
+      "confirmTitle": "Déplacez {firstName} {lastName} vers un autre groupe."
+    },
+    "addToNewGroup": "Ajouter une personne à ce groupe",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "changeGroupButtonTooltip": "Passez à un autre groupe.",
+    "moveToNewGroup": "Nouveau groupe",
+    "createGroupFromColumns": "Créez des groupes à partir de la colonne :",
+    "groupAggregationInfo": "Pour spécifier les destinataires, incluez l'en-tête 'recipient_info' avec les valeurs possibles : '1' - en-tête, '0' ou vide - destinataire.",
+    "validation_import_group_valid_items.tasks.title": "Importer des éléments valides de groupe",
+    "groupTaskConfirmation.title": "Confirmation de téléchargement de groupe",
+    "dialogActions.continue": "Continuer",
+    "dialogActions.goBack": "Annuler"
+  }

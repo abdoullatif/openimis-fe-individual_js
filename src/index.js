@@ -7,6 +7,7 @@ import React from 'react';
 import { Person, People } from '@material-ui/icons';
 import MenuIcon from '@material-ui/icons/Menu';
 import messages_en from './translations/en.json';
+import messages_fr from './translations/fr.json';
 import reducer from './reducer';
 import IndividualsPage from './pages/IndividualsPage';
 import IndividualPage from './pages/IndividualPage';
@@ -78,7 +79,10 @@ const BENEFIT_PLAN_TABS_PANEL_REF_KEY = 'socialProtection.BenefitPlansListTabPan
 const { BenefitPlansListTabLabel, BenefitPlansListTabPanel } = getBenefitPlansListTab();
 
 const DEFAULT_CONFIG = {
-  translations: [{ key: 'en', messages: flatten(messages_en) }],
+  translations: [
+    { key: 'en', messages: flatten(messages_en) },
+    { key: 'fr', messages: flatten(messages_fr) }
+  ],
   reducers: [{ key: 'individual', reducer }],
   'core.Router': [
     { path: ROUTE_INDIVIDUALS, component: IndividualsPage },
