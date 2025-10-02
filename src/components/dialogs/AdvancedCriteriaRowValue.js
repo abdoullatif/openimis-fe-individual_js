@@ -9,6 +9,8 @@ import {
   TextInput,
   NumberInput,
   SelectInput,
+  useModulesManager,
+  useTranslations,
   CustomFilterTypeStatusPicker,
   CustomFilterFieldStatusPicker,
 } from '@openimis/fe-core';
@@ -16,6 +18,7 @@ import { Grid } from '@material-ui/core';
 import { withTheme, withStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
 import {
+  INDIVIDUAL_MODULE_NAME,
   BOOLEAN,
   INTEGER,
   STRING,
@@ -29,7 +32,6 @@ const styles = (theme) => ({
 });
 
 function AdvancedCriteriaRowValue({
-  // eslint-disable-next-line no-unused-vars
   intl,
   classes,
   customFilters,
@@ -45,9 +47,7 @@ function AdvancedCriteriaRowValue({
 
     if (attribute === 'field') {
       updatedFilter = {
-        ...{
-          filter: '', value: '', type: value.type,
-        },
+        ...{ filter: '', value: '', type: value.type, referential: value.referential, typeLocation: value.typeLocation },
       };
     }
 
@@ -74,13 +74,56 @@ function AdvancedCriteriaRowValue({
   };
 
   const renderInputBasedOnType = (type) => {
+    const modulesManager = useModulesManager();
+    const { formatMessage } = useTranslations("paymentPlan", modulesManager);
     const commonProps = {
       module: 'paymentPlan',
-      label: 'paymentPlan.advancedCriteria.value',
+      label: formatMessage('paymentPlan.advancedCriteria.value'),
       value: currentFilter.value,
       onChange: onAttributeChange('value'),
     };
 
+    // Cas spécial pour les Localités
+    if (currentFilter.referential === "Location") {
+      switch (currentFilter.typeLocation) {
+        case "Region":
+          return (
+            <PublishedComponent
+              pubRef="location.LocationPicker"
+              {...commonProps}
+              locationLevel={0}
+            />
+          );
+        case "District":
+          return (
+            <PublishedComponent
+              pubRef="location.LocationPicker"
+              {...commonProps}
+              locationLevel={1}
+            />
+          );
+        case "Municipality":
+          return (
+            <PublishedComponent
+              pubRef="location.LocationPicker"
+              {...commonProps}
+              locationLevel={2}
+            />
+          );
+        case "Village":
+          return (
+            <PublishedComponent
+              pubRef="location.LocationPicker"
+              {...commonProps}
+              locationLevel={3}
+            />
+          );
+        default:
+          return null;
+      }
+    }
+
+    // Cas standard (BOOLEAN, INTEGER, STRING, DATE)
     switch (type) {
       case BOOLEAN:
         return (
@@ -136,6 +179,7 @@ function AdvancedCriteriaRowValue({
               transform: 'translate(-50%, -50%)',
               fontSize: '16px',
               color: '#006273',
+              cursor: 'pointer',
             }}
             onClick={removeFilter}
           >
@@ -147,7 +191,7 @@ function AdvancedCriteriaRowValue({
         <CustomFilterFieldStatusPicker
           module="paymentPlan"
           label="paymentPlan.advancedCriteria.field"
-          value={{ field: currentFilter.field, type: currentFilter.type }}
+          value={{ field: currentFilter.field, type: currentFilter.type, referential: currentFilter.referential, typeLocation: currentFilter.typeLocation }}
           onChange={onAttributeChange('field')}
           customFilters={customFilters}
           readOnly={readOnly}
